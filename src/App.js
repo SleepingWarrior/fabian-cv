@@ -1,5 +1,3 @@
-import "./App.css";
-import Landing from "./components/Landing";
 import Contact from "./components/Contact";
 import Competencies from "./components/Competencies";
 import styled from "styled-components";
@@ -13,7 +11,6 @@ function App() {
     <Wrapper className='App'>
       <Header />
       <Home />
-      <Landing />
       <About />
       <Education />
       <Competencies />
@@ -25,48 +22,44 @@ function App() {
 export default App;
 
 const Wrapper = styled.div`
-  --yellow: #f9ca24;
-  --blue: #1363df;
+  /* --blue: #1363df; */
   font-family: "Nunito", sans-serif;
-  margin: 0;
-  padding: 0;
+  /* margin: 0; */
+  /* padding: 0; */
+  border: 3px solid yellow;
   box-sizing: border-box;
   text-decoration: none;
   outline: none;
   border: none;
   text-transform: capitalize;
-  background: #111;
-  color: #fff;
+  /* background: var(--background); */
   font-size: 62.5%;
   overflow-x: hidden;
+
+  .heading {
+    text-align: center;
+    margin: 0 6rem;
+    font-size: var(--main-heading-h1);
+    padding: 1rem;
+    border-bottom: 0.1rem solid #fff4;
+    color: var(--text-color);
+    /* display: inline-block; */
+  }
+
+  .btn {
+    padding: 0.7rem 4rem;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    font-size: 2rem;
+    border-radius: 5rem;
+  }
+
+  .btn i {
+    padding: 0 0.5rem;
+    font-size: 1.8rem;
+    &:hover {
+      background: var(--yellow);
+    }
+  }
 `;
-
-// overflow-x: hidden;
-// padding-left: 35rem;
-// ${'' /* *::selection {
-//   background: var(--yellow);
-//   color: #333;
-// } */}
-
-// ${'' /* html {
-//   font-size: 62.5%;
-//   overflow-x: hidden;
-// }
-
-// html::-webkit-scrollbar {
-//   width: 1.4rem;
-// }
-
-// html::-webkit-scrollbar-track {
-//   background: #222;
-// }
-
-// html::-webkit-scrollbar-thumb {
-//   background: var(--yellow);
-// }
-
-// body {
-//   background: #111;
-//   overflow-x: hidden;
-//   padding-left: 35rem;
-// }

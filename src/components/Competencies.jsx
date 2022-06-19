@@ -4,10 +4,10 @@ import styled from "styled-components";
 function Competencies() {
   return (
     <Wrapper>
-      <Heading className='heading'>
-        <Span>my </Span>Competencies
-      </Heading>
-      <DivSkills className='skills-container'>
+      <h1 className='heading'>
+        <span>my </span>Competencies
+      </h1>
+      <div className='container'>
         <div className='web-skills-container'>
           <h3 className='web-skills-heading'>Web Development</h3>
           <ul className='skills-list'>
@@ -84,7 +84,7 @@ function Competencies() {
             </li>
           </ul>
         </div>
-      </DivSkills>
+      </div>
     </Wrapper>
   );
 }
@@ -92,87 +92,99 @@ function Competencies() {
 export default Competencies;
 
 const Wrapper = styled.section`
-    margin-left: 0rem;
-    padding: 0;
+  margin-left: 0rem;
+  padding: 0;
+  border: 5px solid blue;
+  height: 100vh;
+
+  .container {
+    display: flex;
+    flex-direction: column;
     border: 1px solid red;
-`
-const DivSkills = styled.div`
-  display: flex;
-  flex-direction: column;
-  ${'' /* height: 100vh; */}
-  border: 1px solid red;
+
+    .web-skills-container {
+      margin-left: 4rem;
+      margin-bottom: 2rem;
+      border: solid 1px yellow;
+      line-height: 2rem;
+
+      h3 {
+        font-size: var(--primary-heading-h2);
+        display: block;
+        color: var(--text-color);
+        margin: 0rem;
+        ${"" /* margin-left: 4rem; */}
+      }
+    }
+
+    ul li {
+      text-transform: none;
+      /* margin: 2rem 0; */
+      margin-top: 1rem;
+      color: var(--text-color);
+      text-decoration: none;
+      font-size: 1.5rem;
+      width: 90%;
+      border: solid 1px red;
+    }
+
+    ul li span {
+      color: var(--blue);
+    }
+
+    /* border: solid 1px blue; */
+  }
+
+  .other-skills-container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid blue;
+    margin-left: 0rem;
+    width: 100%;
+    padding: 0;
+
+    h3 {
+      font-size: var(--primary-heading-h2);
+      margin: 0;
+      margin-left: 4rem;
+    }
+
+    ul {
+      /* border: 1px solid blue; */
+      margin-left: 4rem;
+      width: 100%;
+      font-size: 1.5rem;
+    }
+
+    li {
+      font-size: 1.5rem;
+      margin-left: 0rem;
+      width: 90%;
+
+      b {
+        color: var(--icon-color);
+        font-size: 2rem;
+      }
+    }
+  }
+
+  h1 {
+    text-align: center;
+    margin: 0 6rem;
+    font-size: 5rem;
+    padding: 1rem;
+    border-bottom: 0.1rem solid #fff4;
+    color: #fff;
+  }
+
+  .skills-container h3 {
+    margin-left: 2rem;
+  }
+
+  .other-skills-container ul {
+  }
+
+  .skills-container ul li b {
+    color: var(--blue);
+  }
 `;
-
-const Heading = styled.h1`
-  text-align: center;
-  margin: 0 6rem;
-  font-size: 5rem;
-  padding: 1rem;
-  border-bottom: 0.1rem solid #fff4;
-  color: #fff;
-`;
-
-const Span = styled.span`
-  color: var(--yellow);
-`;
-
-
-
-//   .skills-list {
-//     /* border: 1px solid blue; */
-//     margin-left: 2rem;
-//     max-width: 100%;
-//   }
-
-//   .web-skills-container {
-//     width: 100%;
-//   }
-
-//   .skills-list li div {
-//     font-size: 2rem;
-//   }
-
-//   .edu-btn {
-//     margin: 3rem 1rem;
-//   }
-
-//   .skills-container ul li {
-//     font-size: 1.8rem;
-//     margin-left: 0rem;
-//     width: 100%;
-//   }
-
-//   .skills-container h3 {
-//     margin-left: 2rem;
-//   }
-
-//   .other-skills-container {
-//     display: flex;
-//     border: 1px solid blue;
-//     margin-left: 0rem;
-//     width: 100%;
-//     padding: 0;
-//     background: red;
-//   }
-
-//   .other-skills-container h3 {
-//     display: block;
-//     color: white;
-//     margin-left: 2rem;
-//   }
-
-//   .other-skills-container ul {
-//     display: block;
-//   }
-
-//   .other-skills-container li {
-//     display: block;
-//   }
-
-//   .other-skills-container p {
-//     display: block;
-//   }
-
-//   .skills-container ul li b {
-//     color: var(--blue);
-//   }

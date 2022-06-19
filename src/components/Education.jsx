@@ -4,32 +4,30 @@ import styled from "styled-components";
 const Education = () => {
   return (
     <Wrapper>
-      <Heading className='heading'>
-        my <Span>education</Span>
-      </Heading>
+      <h1 className='heading'>
+        my <span>education</span>
+      </h1>
       <div className='box-container'>
         <div id='edu-box' className='edu-box'>
-          <i className='fas fa-graduation-cap'></i>
+          <i class='bi bi-mortarboard'></i>
           <span>1998</span>
           <h3>Matriculated</h3>
           <p>St Andrews High School</p>
         </div>
-
         <div className='edu-box'>
-          <i className='fas fa-graduation-cap'></i>
+          <i class='bi bi-mortarboard'></i>
           <span>2006</span>
           <h3>Chemical Engineering</h3>
           <p>University of Cape Town</p>
         </div>
-
         <div className='edu-box'>
-          <i className='fas fa-graduation-cap'></i>
+          <i class='bi bi-mortarboard'></i>
           <span>2009</span>
           <h3>Project Management</h3>
           <p>Cape Peninsula Univeristy of Technology</p>
         </div>
         <div className='edu-box'>
-          <i className='fas fa-graduation-cap'></i>
+          <i class='bi bi-mortarboard'></i>
           <span>2022</span>
           <h3>Front End Development</h3>
           <p>Hyeperion Dev</p>
@@ -88,10 +86,11 @@ const Education = () => {
           </li>
         </ul>
       </div>
+
       <a href=' '>
-        <Button id='cv-btn' className='edu-btn btn'>
-          Download CV <i className='fas fa-download'></i>
-        </Button>
+        <button id='cv-btn' className='edu-btn btn'>
+          Download CV <i class='bi bi-download'></i>
+        </button>
       </a>
     </Wrapper>
   );
@@ -100,117 +99,115 @@ const Education = () => {
 export default Education;
 
 const Wrapper = styled.section`
-  border: 1px solid red;
+  border: 5px solid red;
   margin: 0;
   padding: 0;
-  min-height: 100vh;
-  padding: 1rem;
-  margin-left: 2rem;
-`;
+  height: 100vh;
 
-const Heading = styled.h1`
-    text-align: center;
-    margin: 0 6rem;
-    font-size: 5rem;
-    padding: 1rem;
-    border-bottom: 0.1rem solid #fff4;
-    color: #fff;
-`
-const Span = styled.span`
-color: var(--yellow);
-`
+  h3 {
+    font-size: var(--secondary-heading);
+    color: var(--text-color);
+  }
 
-const Button = styled.button`
+  span {
+    color: var(--yellow);
+  }
+
+  .box-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    margin-left: 4rem;
+    margin-bottom: 0;
+  }
+
+  button {
     margin-left: 4.5rem;
-`
+    padding-bottom: 2rem;
+    border: 1px solid red;
+  }
+  .edu-box {
+    /* border: solid 1px red; */
+    height: 15rem;
+  }
 
-//   .education .box-container {
-//     display: flex;
-//     align-items: center;
-//     justify-content: space-between;
-//     flex-wrap: wrap;
-//     padding: 1rem 0;
-//     /* padding-left: 3rem; */
-//     margin-left: 4rem;
-//     margin-bottom: 0;
-//     /* border: solid 1px red; */
-//   }
+  .edu-box {
+    width: 27rem;
+    margin: 3rem 1rem;
+    padding-left: 4rem;
+    border-left: 0.2rem solid #fff;
+    position: relative;
 
+    span {
+      font-size: 1.3rem;
+      background: #222;
+      color: #fff;
+      border-radius: 5rem;
+      padding: 0.5rem 2.5rem;
+    }
 
+    h3 {
+      font-size: var(--secondary-heading);
+      color: var(--text-color);
+      padding-top: 1.5rem;
+    }
 
+    p {
+      font-size: 2rem;
+      color: #eee;
+      padding: 1rem 0;
+    }
 
+    i {
+      position: absolute;
+      top: -1.5rem;
+      left: -2.5rem;
+      height: rem;
+      width: 5rem;
+      border-radius: 50%;
+      line-height: 5rem;
+      text-align: center;
+      font-size: 3rem;
+      color: var(--icon-color);
+      background: var(--yellow);
+    }
+    /* border: solid 1px red; */
+  }
 
+  .udemy-courses {
+    margin-top: 2rem;
+    margin-left: 4rem;
+    margin-bottom: 2rem;
+    border: solid 1px yellow;
+    line-height: 2rem;
+    width: 100%;
 
-//   .edu-box {
-//     /* border: solid 1px red; */
-//     height: 15rem;
-//   }
+    ul li {
+      font-size: 1.5rem;
+      width: 90%;
+      text-transform: none;
+      margin: 2rem 0;
+      margin-top: 2rem;
+      color: var(--text-color);
+      border: solid 1px red;
+    }
 
-//   .education .box-container .edu-box {
-//     width: 27rem;
-//     margin: 3rem 1rem;
-//     padding-left: 4rem;
-//     border-left: 0.2rem solid #fff;
-//     position: relative;
-//   }
+    ul li span {
+      color: var(--blue);
+    }
 
-//   .education .box-container .edu-box span {
-//     font-size: 1.3rem;
-//     background: #222;
-//     color: #fff;
-//     border-radius: 5rem;
-//     padding: 0.5rem 2.5rem;
-//   }
+    h3 {
+      margin-left: 4rem;
+      margin: 0;
+      margin-bottom: 0;
+      font-size: 3rem;
+      /* border: solid 1px blue; */
+    }
 
-//   .education .box-container .edu-box h3 {
-//     font-size: 2rem;
-//     color: #fff;
-//     padding-top: 1.5rem;
-//   }
-
-//   .education .box-container .edu-box p {
-//     font-size: 1.4rem;
-//     color: #eee;
-//     padding: 1rem 0;
-//   }
-
-//   .education .box-container .edu-box i {
-//     position: absolute;
-//     top: -1.5rem;
-//     left: -2.5rem;
-//     height: rem;
-//     width: 5rem;
-//     border-radius: 50%;
-//     line-height: 5rem;
-//     text-align: center;
-//     font-size: 2rem;
-//     color: #fff;
-//     background: var(--yellow);
-//     /* border: solid 1px red; */
-//   }
-
-//   .udemy-courses {
-//     margin: 0;
-//     margin-left: 4rem;
-//     /* border: solid 1px red; */
-//   }
-
-//   .udemy-courses ul li {
-//     font-size: 2rem;
-//     width: 50%;
-//     text-transform: none;
-//     margin: 0;
-//     margin-top: 2rem;
-//     /* border: solid 1px red; */
-//   }
-
-//   .udemy-courses ul li span {
-//     color: var(--blue);
-//   }
-
-//   .udemy-courses h3 {
-//     margin-left: 4rem;
-//     margin: 0;
-    /* margin-bottom: 0; */
-    /* border: solid 1px blue;  */
-//   }
+    a button {
+      margin-bottom: 2rem;
+    }
+  }
+`;

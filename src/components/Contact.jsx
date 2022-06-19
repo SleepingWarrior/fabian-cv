@@ -4,22 +4,24 @@ import styled from "styled-components";
 const Contact = () => {
   return (
     <Wrapper className='contact-section'>
-      <Heading ><Span>contact</Span> me </Heading>
+      <h1 className='heading'>
+        <span>contact</span> me
+      </h1>
       <div className='row'>
         <div className='content'>
-          <h3 className='title'>contact info</h3>
+          <h2 className='title'>contact info</h2>
           <div className='info'>
             <h3 className='info-email'>
-              <i className='fas fa-envelope'></i>fpetersen2@gmail.com
+              <i class='bi bi-envelope-fill'></i>fpetersen2@gmail.com
             </h3>
             <h3>
-              <i className='fas fa-phone'></i>+27 82 887 8720
+              <i class='bi bi-telephone-fill'></i>+27 82 887 8720
             </h3>
             <h3>
-              <i className='fas fa-phone'></i>+27 21 941 4086{" "}
+              <i class='bi bi-telephone-fill'></i>+27 21 941 4086{" "}
             </h3>
             <h3>
-              <i className='fas fa-map-marker-alt'></i>Cape Town, South Africa
+              <i class='bi bi-geo-alt-fill'></i>Cape Town, South Africa
             </h3>
           </div>
           <div className='socials'>
@@ -40,16 +42,16 @@ const Contact = () => {
             </a>
           </div>
         </div>
-        <Form action=''>
-          <h3 className='title'>Leave a Message</h3>
-          <Input type='text' placeholder='name' className='form-box' />
-          <Input type='email' placeholder='email' className='form-box' />
-          <Input type='text' placeholder='description' className='form-box' />
+        <form action=''>
+          <h2 className='title'>Leave a Message</h2>
+          <input type='text' placeholder='name' className='form-box' />
+          <input type='email' placeholder='email' className='form-box' />
+          <input type='text' placeholder='description' className='form-box' />
           <TextArea name='' id='' cols='30' rows='10' className='form-box message' placeholder='message'></TextArea>
           <button type='submit' id='email-btn' className='btn'>
-            send <i className='fas fa-paper-plane'></i>
+            send <i class='bi bi-send-fill'></i>
           </button>
-        </Form>
+        </form>
       </div>
     </Wrapper>
   );
@@ -58,47 +60,126 @@ const Contact = () => {
 export default Contact;
 
 const Wrapper = styled.section`
-  ${"" /* height: 90vh; */}
+  height: 100vh;
   margin: 0;
   padding: 0;
-  border: 1px solid red;
+  border: 5px solid red;
   /* border: 1px solid red; */
-`
-const Heading = styled.h1`
+
+  h1 {
     text-align: center;
     margin: 0 6rem;
-    font-size: 5rem;
     padding: 1rem;
     border-bottom: 0.1rem solid #fff4;
-    color: #fff;
-`
-const Span = styled.span`
-color: var(--yellow);
-`;
+    color: var(--text-color);
 
-const Form = styled.form`
-  margin: 1rem 0;
-  padding-top: 0;
-  border: 1px solid red;
-`;
+    span {
+      color: var(--yellow);
+    }
+  }
 
-const Input = styled.input`
-  width: 100%;
+  .row {
+    .content {
+      h2 {
+        font-size: var(--primary-heading-h2);
+        margin-left: 4rem;
+      }
+
+      h3 {
+        text-transform: none;
+        font-size: var(--secondary-heading-h3);
+        margin-left: 4rem;
+
+        i {
+          margin-right: 1.5rem;
+          color: var(--yellow);
+        }
+      }
+
+      .socials {
+        display: flex;
+        font-size: 3rem;
+        margin-left: 4rem;
+        margin-top: 2rem;
+        gap: 5rem;
+
+        i {
+          color: var(--icon-color);
+          &:hover {
+            color: var(--yellow);
+            cursor: pointer;
+            font-size: 4.5rem;
+          }
+        }
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      padding: 2rem;
+      margin: 2rem;
+      margin-bottom: 3rem;
+      margin-top: 0rem;
+      margin: 1rem 0;
+      padding-top: 0;
+      border: 1px solid yellow;
+
+      h2 {
+        font-size: var(--primary-heading-h2);
+        padding:0;
+        margin-left: 4rem;
+      }
+
+      .form-box {
+        padding: 0.5rem;
+        margin: 1rem 0;
+        background: #3333;
+        color: #fff;
+        text-transform: none;
+        font-size: 1.7rem;
+        width: 50%;
+        border: 1px solid var(--icon-color);
+
+        &::placeholder {
+          text-transform: capitalize;
+        }
+      }
+
+      input {
+        width: 50%;
+      }
+
+      .message {
+        height: 10rem;
+        resize: none;
+      }
+
+      button {
+        width: 15rem;
+        border: solid red 1px;
+        padding: 0.7rem 2rem;
+      }
+    }
+  }
 `;
 
 const TextArea = styled.textarea``;
+/* span{
+color: var(--yellow);
 //   .contact .row form {
-//     margin: 1rem 0;
-//     padding-top: 0;
-//     /* border: 1px solid red; */
-//   }
-
-//   .contact .row form {
-//     border: 1px solid red;
-//     width: 100%;
-//   }
-
-//   .info-email {
-//     text-transform: none;
-//   }
-// `;
+  //     margin: 1rem 0;
+  //     padding-top: 0;
+  //     /* border: 1px solid red;
+  //   }
+  
+  //   .contact .row form {
+    //     border: 1px solid red;
+    //     width: 100%;
+    //   }
+    
+    //   .info-email {
+      //     text-transform: none;
+      //   }
+      /*  //
+      */

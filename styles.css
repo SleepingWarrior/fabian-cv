@@ -1,0 +1,149 @@
+/* Media Devices Styling smaller than 991px */
+/* Main Body Styling */
+
+body {
+    margin: 0px 0px 50px;
+}
+
+/* Navbar Styling */
+.nav-form {
+    padding-right: 15px;
+}
+
+.nav-item {
+    padding-left: 15px;
+}
+
+.navbar {
+    width: 100%;
+}
+
+.search-box {
+    width: 385px;
+}
+
+/* Styling the Catogory Section  */
+.category {
+    font-size: 30px;
+    margin-top: 8px;
+    width: 270px;
+}
+
+th {
+    font-size: 40px;
+    font-family: 'Open Sans', sans-serif;
+    border-right: solid 1px grey;
+}
+
+/* Styling the Images */
+.images {
+    width: 18rem;
+    height: 20rem;
+    border: none;
+    margin-left: 5px;
+}
+
+.images:hover {
+    cursor: pointer;
+}
+
+/* Styling the cards */
+.store-items {
+    width: 350px;
+    height: 35rem;
+    border-radius: 10px;
+}
+
+.store-items:hover {
+    border: solid 1px blue;
+    box-shadow: 10px 10px skyblue;
+}
+
+/* Styling the cards */
+.card-title {
+    font-size: 30px;
+    margin-top: 5px;
+}
+
+.card-text {
+    height: 60px;
+}
+
+/* --------------------- Styling buttons and icons ---------------------  */
+
+.btn-cart {
+    width: 10rem;
+    height: 2.5rem;
+    padding: 7px;
+}
+
+.cart {
+    margin-left: 0;
+    display: inline-block;
+}
+
+.icon-heart {
+    padding-left: 20px;
+    padding-right: 20px;
+    vertical-align: middle;
+    margin-bottom: 10px 0px;
+    font-size: 35px;
+    padding-left: 40px;
+    color: blue;
+}
+
+.icon-cart {
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+.btn-cart:hover {
+    background-color: #149154;
+    border: 1px solid #149154;
+}
+
+.icon-heart:hover {
+    color: #149154;
+}
+
+.btn-submit {
+    width: 100px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+/* 
+---------------------
+Form Styling 
+--------------------- */
+.form-background {
+    background-color: khaki;
+    height: 250px;
+    width: 100%;
+}
+
+.thumbcard {
+    height: 35rem;
+}
+
+@media (max-width: 991.98px) {
+    .thumbcard {
+        height: 28rem;
+    }
+
+    .images {
+        width: 10rem;
+        height: 12rem;
+    }
+
+    .category {
+        font-size: 15px;
+        margin-top: 8px;
+        width: 270px;
+    }
+
+    .search-box {
+        width: 250px;
+    }
+
+}

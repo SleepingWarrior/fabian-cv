@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import Nav from "./Nav";
+import profileImage from "../images/profile-image-modified.jpeg";
 
 const Header = () => {
   return (
     <Wrapper>
-      <Image src={"./images/profile-image-modified.jpeg"} alt='' />
-      <Text class='post'>Full Stack Developer</Text>
+      <img src={profileImage} alt='profile_image' />
+      <p class='post'>Full Stack Developer</p>
       <Nav />
     </Wrapper>
   );
@@ -28,19 +29,20 @@ const Wrapper = styled.header`
   text-align: center;
   min-height: 100vh;
   padding: 1rem;
-  margin-left: 2rem;
-  /* border: solid 1px blue; */
-`;
-const Image = styled.img`
-  height: 25rem;
-  width: 25rem;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1rem;
-  border: 0.7rem solid var(--yellow);
-`;
+  border: solid 1px blue;
 
-const Text = styled.p`
-  font-size: 3rem;
-  color: #eee;
+  img {
+    ${'' /* background-image:url(../public/images/profile-image-modified.jpeg) */}
+    height: 25rem;
+    width: 25rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 0.7rem solid var(--yellow);
+  }
+
+  p {
+    font-size: 3rem;
+    color: #eee;
+  }
 `;

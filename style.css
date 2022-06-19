@@ -1,0 +1,1205 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap");
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css");
+
+:root {
+  --yellow: #f9ca24;
+  --blue: #1363df;
+}
+
+* {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  /* transition: all 0.2s linear; */
+}
+
+*::selection {
+  background: var(--yellow);
+  color: #333;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+  width: 1.4rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: #222;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--yellow);
+}
+
+body {
+  background: #111;
+  overflow-x: hidden;
+  padding-left: 35rem;
+}
+
+section {
+  min-height: 100vh;
+  padding: 1rem;
+  margin-left: 2rem;
+}
+
+.bio {
+  text-transform: none;
+}
+
+
+.edu-btn {
+  margin-left: 2rem;
+}
+
+.heading {
+  text-align: center;
+  margin: 0 6rem;
+  font-size: 5rem;
+  padding: 1rem;
+  border-bottom: 0.1rem solid #fff4;
+  color: #fff;
+}
+
+.heading span {
+  color: var(--yellow);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: 100%;
+  width: 35rem;
+  background: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  text-align: center;
+  /* border: solid 1px blue; */
+}
+
+header .user img {
+  height: 25rem;
+  width: 25rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 0.7rem solid var(--yellow);
+}
+
+img {
+  border: 0px;
+  outline: 0px;
+  /* border: 1px solid black; */
+}
+
+header .user .post {
+  font-size: 3rem;
+  color: #eee;
+}
+
+header .navbar {
+  width: 100%;
+}
+
+header .navbar ul li a {
+  display: block;
+  padding: 1rem;
+  margin: 2rem 0;
+  background: #333;
+  color: #fff;
+  font-size: 2rem;
+  border-radius: 5rem;
+  width: 30rem;
+}
+
+header .navbar ul li a:hover {
+  background: var(--yellow);
+}
+
+#menu {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  font-size: 2.5rem;
+  padding: 1rem 1.5rem;
+  z-index: 1000;
+  display: none;
+  /* border: 1px solid red; */
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  padding: 0 15rem;
+}
+
+.home h3 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  color: #fff;
+}
+
+.home h1 {
+  font-size: 5rem;
+  color: #fff;
+}
+
+.home h1 span {
+  color: var(--yellow);
+}
+
+.home p {
+  font-size: 2rem;
+  color: #eee;
+  padding: 1rem 0;
+}
+
+/* ------------------------------ About Section -------------------------------- */
+.about .row {
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+}
+
+.about .row .info {
+  flex: 1 1 30rem;
+  padding: 2rem 1rem;
+  padding-left: 6rem;
+}
+
+.about .row .info h3 {
+  font-size: 2rem;
+  color: var(--yellow);
+  padding: 1rem 0;
+  font-weight: normal;
+}
+
+.about .row .info h3 span {
+  color: #eee;
+  padding: 0 0.5rem;
+}
+
+.about .row .counter {
+  flex: 1 1 48rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.about-box {
+  width: 25rem;
+  background: #222;
+  text-align: center;
+  padding: 2rem;
+  margin: 1rem;
+  /* border: solid 1px red; */
+}
+
+.about-box {
+  width: 40rem;
+  height: 15rem;
+  border: solid 3px red;
+  border-radius: 10px;
+}
+
+.counter {
+  display: flex;
+  flex-direction: column;
+  /* border: solid 1px blue; */
+  width: 50%;
+}
+
+.info {
+  /* border: solid 1px yellow; */
+  margin-top: 1rem;
+}
+
+.about-heading {
+  color: white;
+  margin-left: 1rem;
+}
+
+.projects {
+  display: flex;
+  /* border: solid 1px yellow; */
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+}
+.about .row .counter .about-box span {
+  font-size: 4rem;
+  color: var(--yellow);
+}
+
+.about .row .counter .about-box h3 {
+  font-size: 2rem;
+  color: #fff;
+}
+
+/* -------------------------------- Education --------------------------- */
+.education {
+  /* border: 1px solid red; */
+  margin: 0;
+  padding: 0;
+}
+
+.education .box-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+  /* padding-left: 3rem; */
+  margin-left: 4rem;
+  margin-bottom: 0;
+  /* border: solid 1px red; */
+}
+
+.edu-box {
+  /* border: solid 1px red; */
+  height: 15rem;
+}
+
+.education .box-container .edu-box {
+  width: 27rem;
+  margin: 3rem 1rem;
+  padding-left: 4rem;
+  border-left: 0.2rem solid #fff;
+  position: relative;
+}
+
+.education .box-container .edu-box span {
+  font-size: 1.3rem;
+  background: #222;
+  color: #fff;
+  border-radius: 5rem;
+  padding: 0.5rem 2.5rem;
+}
+
+.education .box-container .edu-box h3 {
+  font-size: 2rem;
+  color: #fff;
+  padding-top: 1.5rem;
+}
+
+.education .box-container .edu-box p {
+  font-size: 1.4rem;
+  color: #eee;
+  padding: 1rem 0;
+}
+
+.education .box-container .edu-box i {
+
+}
+
+.udemy-courses {
+  margin: 0;
+  margin-left: 4rem;
+  /* border: solid 1px red; */
+}
+
+.udemy-courses ul li {
+  font-size: 2rem;
+  width: 50%;
+  text-transform: none;
+  margin: 0;
+  margin-top: 2rem;
+  /* border: solid 1px red; */
+}
+
+.udemy-courses ul li span {
+  color: var(--blue);
+}
+
+.udemy-courses h3 {
+  margin-left: 4rem;
+  margin: 0;
+  /* margin-bottom: 0; */
+  /* border: solid 1px blue;  */
+}
+
+.edu-btn {
+  margin-left: 4.5rem;
+}
+/* ------------------------- Competencies --------------------------- */
+.competencies {
+  /* border: 1px solid blue; */
+  margin: 0;
+  padding: 0;
+}
+
+.skills-container {
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  padding: 2rem 0;
+  /* border-left: 0.2rem solid #fff; */
+  border-radius: 1rem;
+  margin-left: 4rem;
+  overflow: hidden;
+  cursor: pointer;
+  /* border: solid 1px white; */
+  justify-content: left;
+}
+
+.web-skills-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  /* border: solid 1px green; */
+}
+
+.other-skills-container {
+  /* border: solid 1px red; */
+  padding: 0;
+}
+
+.web-skills-heading,
+.other-skills-heading {
+  /* display: block; */
+  color: #fff;
+  font-size: 3rem;
+  /* border: solid 1px blue; */
+  height: 5rem;
+  width: 100%;
+}
+
+.skills-description {
+  color: #fff;
+  text-transform: none;
+}
+
+.skills-list {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 1.5rem;
+  padding-reight: 0rem;
+  margin-right: 2rem;
+  list-style: none;
+  font-size: 2rem;
+  /* border: solid 1px var(--yellow); */
+}
+
+.skills-list li {
+  margin: 0 0 3rem;
+  font-size: 1.7rem;
+  /* background: #3333; */
+  /* border: solid 1px var(--yellow); */
+  color: #fff;
+}
+
+.skills-list li div {
+  margin-top: 1.5rem;
+}
+
+.skills-container ul li b {
+  color: var(--blue);
+  font-size: 2rem;
+}
+
+/* ------------------------- Contact Me --------------------------- */
+.contact .row {
+  display: flex;
+  flex-direction: column;
+  align-items: top;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact .row .content {
+  flex: 1 1 30rem;
+  padding: 0rem 4rem 0rem 4rem;
+}
+
+.contact .row form {
+  flex: 1 1 40rem;
+  padding: 2rem;
+  margin: 2rem;
+  margin-bottom: 3rem;
+  margin-top: 0rem;
+  /* border: solid 0.4px gray; */
+}
+
+.contact .row form .form-box {
+  padding: 0.5rem;
+  margin: 1rem 0;
+  background: #3333;
+  color: #fff;
+  text-transform: none;
+  font-size: 1.7rem;
+  width: 50%;
+  border: 1px solid var(--blue);
+}
+
+.contact .row form .form-box::placeholder {
+  text-transform: capitalize;
+}
+
+.contact .row form .message {
+  height: 15rem;
+  resize: none;
+}
+
+form .title {
+  /* text-transform: uppercase; */
+  color: #fff;
+  font-size: 2rem;
+  /* border: 1px solid blue; */
+}
+
+.contact .row .content .title {
+  color: #fff;
+  font-size: 2rem;
+  padding-bottom: 0rem;
+  /* border: 1px solid red; */
+}
+
+.info-email {
+  text-transform: none;
+}
+
+.contact .row .content .info h3 {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  color: #eee;
+  padding: 1rem 0;
+  font-weight: normal;
+}
+
+.contact .row .content .info h3 i {
+  padding-right: 1rem;
+  color: var(--yellow);
+}
+
+.btn {
+  display: block;
+}
+
+.top {
+  position: fixed;
+  bottom: 7.5rem;
+  right: 2rem;
+  z-index: 100;
+  display: none;
+}
+
+.socials {
+  display: flex;
+  margin-top: 2rem;
+  height: 5rem;
+}
+
+.socials-icons i {
+  color: var(--blue);
+  margin-right: 5rem;
+  height: 5rem;
+  width: 3rem;
+  font-size: 4rem;
+  position: relative;
+}
+
+.socials-icons i:hover {
+  cursor: pointer;
+  font-size: 4.5rem;
+  color: var(--yellow);
+}
+
+/* media queries  */
+
+@media (min-width: 992px) and (max-width: 1400px) {
+  header .navbar ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid green; */
+  }
+
+  /* Landing Page */
+  #home h1 span {
+    display: inline-block;
+    margin-top: 2rem;
+    /* border: 1px solid green; */
+  }
+
+  .heading {
+    margin: 0.5rem;
+    font-size: 4.2rem;
+    /* border: 1px solid red; */
+  }
+
+  #about-btn {
+    margin-top: 4rem;
+  }
+
+  /* ---------------------------------------- About Page  ------------------------------------*/
+
+  #about {
+    height: 100%;
+    /* border: 1px solid green; */
+  }
+
+  .row {
+    display: flex;
+    /* heigth: 100%; */
+    /* flex-direction: column; */
+    /* border: 1px solid green; */
+  }
+
+  #about-info {
+    /* border: 1px solid yellow; */
+    max-width: 100%;
+    padding: 0;
+    /* height: 100vh; */
+    /* padding-left: 8px; */
+  }
+
+  .about-box > h3 {
+    margin: 0 auto;
+    width: 100%;
+    /* border: 1px solid yellow; */
+  }
+
+  #project-list {
+    /* border: 1px solid red; */
+    display: flex;
+    /* flex: 1; */
+    flex-direction: row;
+  }
+
+  #project-list > .about-heading {
+    margin: 0 auto;
+    /* border: 1px solid blue; */
+  }
+
+  .projects {
+    justify-content: space-around;
+  }
+
+  .projects .about-box {
+    width: 30%;
+  }
+  .about .row .counter .about-box span {
+    font-size: 4rem;
+  }
+
+  .about .row .counter .about-box h3 {
+    font-size: 1.5rem;
+  }
+
+  .about .row .info h3 {
+    /* border: 1px solid blue; */
+    font-size: 2rem;
+    width: 100%;
+    padding: 0rem;
+    /* height:100%; */
+  }
+
+  .about .row .info {
+    /* border: 1px solid blue; */
+  }
+  /* -------------------------------------------- Education Page ------------------------------------------ */
+
+  .box-container {
+    /* border: solid 1px #fff; */
+  }
+
+  .education .box-container .edu-box {
+    /* border: solid 1px red; */
+  }
+
+  .edu-box span {
+    font-size: 2rem;
+    /* border: solid 1px yellow; */
+  }
+
+  .education .box-container .edu-box p {
+    font-size: 2rem;
+    /* border: solid 1px yellow; */
+  }
+
+  .education .box-container .box {
+    max-width: 100vw;
+  }
+
+  .education .box-container .edu-box span {
+    font-size: 1.8rem;
+  }
+
+  .udemy-courses h3 {
+    font-size: 2.8rem;
+  }
+  .udemy-courses ul li {
+    /* border: 1px solid red; */
+    width: 100%;
+  }
+  /* <------------------------------------------- Competencies Page ----------------------------------> */
+  .skills-container {
+    flex-direction: column;
+    margin-left: 4rem;
+    /* height: 90vh; */
+  }
+
+  .skills-list {
+    /* border: 1px solid red; */
+    max-width: 100%;
+    /* margin-left: 4rem; */
+  }
+
+  .web-skills-container {
+    width: 100%;
+  }
+
+  .skills-list li div {
+    font-size: 2rem;
+  }
+
+  .edu-btn {
+    margin: 5rem;
+  }
+
+  .skills-container ul li {
+    font-size: 2rem;
+    margin-left: 0rem;
+    width: 100%;
+  }
+
+  .skills-container h3 {
+    margin-left: 2rem;
+  }
+
+  .other-skills-container {
+    /* border: 1px solid blue; */
+    margin-left: 0rem;
+    width: 100%;
+  }
+
+  .skills-container ul li b {
+    color: var(--blue);
+  }
+
+  /* <---------------------------------------------- Contact Page -----------------------------------------> */
+
+  .contact .row form {
+    margin: 1rem 0;
+    padding-top: 0;
+    /* border: 1px solid red; */
+  }
+
+  .contact {
+    height: 100%;
+    /* border: 1px solid red; */
+  }
+
+  .contact .row form {
+    /* border: 1px solid red; */
+    width: 80%;
+  }
+
+  .contact .row form .form-box {
+    width: 95%;
+  }
+
+  .info-email {
+    text-transform: none;
+  }
+}
+
+@media (max-width: 991px) {
+  header {
+    left: -120%;
+  }
+
+  #menu {
+    display: block;
+  }
+
+  header.toggle {
+    left: 0%;
+  }
+
+  body {
+    padding: 0;
+  }
+
+  .home {
+    margin-left: 4rem;
+    padding: 0 2rem;
+    width: 90%;
+    padding: 0;
+    /* border: 1px solid red; */
+  }
+
+  .home p {
+    /* padding: 0 2rem; */
+  }
+  /* Landing Page */
+  #home h1 span {
+    /* display: block; */
+    margin-top: 2rem;
+    /* border: 1px solid green; */
+  }
+
+  #about-btn {
+    margin-top: 4rem;
+  }
+
+  .about .row .counter .box {
+    width: 90vw;
+  }
+
+  /* ---------------------------------------- About Page  ------------------------------------*/
+  .row {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+  }
+
+  #about-info {
+    /* border: 1px solid yellow; */
+    display: block;
+    padding-bottom: 0rem;
+    width: 100%;
+    height: 100vh;
+    padding-left: 8px;
+  }
+
+  .about-box > h3 {
+    margin: 0 auto;
+    font-size: 3rem;
+    width: 100%;
+  }
+
+  #project-list {
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    display: block;
+  }
+
+  #project-list > .about-heading {
+    margin: 0 auto;
+  }
+
+  .projects {
+    justify-content: space-around;
+  }
+
+  .projects .about-box {
+    width: 40%;
+  }
+
+  .info h3 {
+    /* border: 1px solid blue; */
+    padding: 0rem;
+    width: 100%;
+  }
+
+  /* -------------------------------------------- Education Page ------------------------------------------ */
+
+  .box-container {
+    /* border: solid 1px #fff; */
+    max-width: 100%;
+    /* margin-left: 1rem; */
+  }
+
+  .edu-box span {
+    font-size: 2rem;
+    /* border: solid 1px yellow; */
+  }
+
+  .education .box-container .edu-box p {
+    font-size: 2rem;
+    /* border: solid 1px yellow; */
+  }
+
+  .education .box-container .box {
+    width: 100vw;
+  }
+
+  .education .box-container .edu-box span {
+    font-size: 1.8rem;
+    /* border: 1px solid red;  */
+  }
+
+  .udemy-courses h3 {
+    font-size: 2.8rem;
+    /* border: 1px solid red; */
+    margin: 0;
+    padding: 0;
+  }
+  .udemy-courses ul li {
+    /* border: 1px solid red; */
+    width: 100%;
+  }
+  /* <------------------------------------------------- Competencies Page ------------------------------------> */
+
+  .skills-container {
+    flex-direction: column;
+    margin-left: 0rem;
+    height: 100%;
+    /* border: 1px solid red;  */
+  }
+
+  .skills-list {
+    /* border: 1px solid red; */
+    padding-top: 0rem;
+    width: 90vw;
+  }
+
+  .web-skills-container {
+    width: 100%;
+    /* border: 1px solid red;  */
+  }
+
+  .skills-list li div {
+    font-size: 2rem;
+  }
+
+  .edu-btn {
+    margin: 5rem;
+  }
+
+  .skills-container ul li {
+    font-size: 2rem;
+    margin-left: 0rem;
+    width: 100%;
+  }
+
+  .skills-container h3 {
+    margin-left: 2rem;
+  }
+
+  .other-skills-container {
+    /* border: 1px solid blue; */
+    /* margin-left: 2rem; */
+    width: 100%;
+  }
+
+  .skills-container ul li b {
+    color: var(--blue);
+  }
+
+  /* <---------------------------------------------- Contact Page -----------------------------------------> */
+
+  .contact .row form {
+    margin: 1rem 0;
+    padding-top: 0;
+    /* border: 1px solid red; */
+  }
+
+  .contact {
+    height: 90vh;
+    /* border: 1px solid red; */
+  }
+
+  .contact .row form {
+    /* border: 1px solid red; */
+    width: 80%;
+  }
+
+  .contact .row form .form-box {
+    width: 95%;
+  }
+
+  .info-email {
+    text-transform: none;
+  }
+}
+
+/* --------------------------------------------- 400px changed to 768px Screen Size ------------------------------------- */
+@media (max-width: 768px) {
+  header {
+    width: 100%;
+  }
+
+  .home {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0rem;
+    /* border: 1px solid red; */
+  }
+  .home h3 {
+    font-size: 2rem;
+    padding-top: 3rem;
+    /* border: 1px solid green; */
+  }
+
+  .home h1 {
+    font-size: 3rem;
+    /* border: 1px solid red; */
+    padding-bottom: 3rem;
+    margin: 0;
+  }
+
+  .home p {
+    /* border: 1px solid yellow; */
+    font-size: 1.8rem;
+    width: 100%;
+    margin: 0rem;
+    padding: 1rem;
+  }
+
+  /* about me heading */
+  .heading {
+    margin: 0 0.5rem;
+    font-size: 3.5rem;
+    /* border: 1px solid green;*/
+  }
+
+  header .navbar ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Landing Page */
+  #home h1 span {
+    display: block;
+    margin-top: 2rem;
+    /* border: 1px solid green; */
+  }
+
+  #about-btn {
+    margin: 0rem;
+  }
+
+  /* ---------------------------------------- About Page  ------------------------------------*/
+
+  .about {
+    /* border: 1px solid red; */
+    width: 100vw;
+    margin: 0;
+    padding: 0rem;
+  }
+  .about .row .counter .box {
+    /* border: 1px solid blue; */
+  }
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #about-info {
+    /* border: 1px solid yellow; */
+    padding: 1rem;
+    display: block;
+    width: 100%;
+  }
+
+  #about-info h3 {
+    font-size: 1.8rem;
+  }
+
+  .about-box > h3 {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  #project-list {
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    justify-content: space-between;
+    display: block;
+  }
+
+  #project-list > .about-heading {
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  .projects {
+    justify-content: space-around;
+  }
+
+  .projects .about-box {
+    width: 40%;
+  }
+
+  .info h3 {
+    /* border: 1px solid blue; */
+    padding: 0rem;
+    width: 100%;
+  }
+
+  /* -------------------------------------------- Education Page ------------------------------------------ */
+  .education {
+    /* border: solid 1px yellow; */
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+
+  .education .box-container {
+    margin-left: 2rem;
+    border: none;
+  }
+
+  .education .box-container .edu-box {
+    width: 100%;
+  }
+
+  .education .box-container .edu-box span {
+    font-size: 1.8rem;
+  }
+
+  .udemy-courses {
+    margin: 2rem;
+  }
+
+  .udemy-courses h3 {
+    font-size: 2rem;
+    border: none;
+  }
+  .udemy-courses ul {
+    margin: 0;
+    max-width: 100%;
+    border: none;
+  }
+
+  .udemy-courses ul li {
+    /* border: 1px solid red; */
+    max-width: 100%;
+    font-size: 1.8rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .skills-list li div {
+    margin-top: 0.2rem;
+  }
+
+  #cv-btn {
+    margin: 0;
+    margin-left: 3rem;
+  }
+  /* <------------------------------------------------- Competencies Page ------------------------------------> */
+  .competencies {
+    margin-left: 0rem;
+    padding: 0;
+    /* height: 100vh; */
+    /* border: 1px solid red; */
+  }
+  .skills-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    /* border: 1px solid red; */
+  }
+
+  .skills-list {
+    /* border: 1px solid blue; */
+    margin-left: 2rem;
+    max-width: 100%;
+  }
+
+  .web-skills-container {
+    width: 100%;
+  }
+
+  .skills-list li div {
+    font-size: 2rem;
+  }
+
+  .edu-btn {
+    margin: 3rem 1rem;
+  }
+
+  .skills-container ul li {
+    font-size: 1.8rem;
+    margin-left: 0rem;
+    width: 100%;
+  }
+
+  .skills-container h3 {
+    margin-left: 2rem;
+  }
+
+  .other-skills-container {
+    display: flex;
+    border: 1px solid blue;
+    margin-left: 0rem;
+    width: 100%;
+    padding: 0;
+    background: red;
+  }
+
+  .other-skills-container h3 {
+    display: block;
+    color: white;
+    margin-left: 2rem;
+  }
+
+  .other-skills-container ul {
+    display: block;
+  }
+
+  .other-skills-container li {
+    display: block;
+  }
+
+  .other-skills-container p {
+    display: block;
+  }
+
+  .skills-container ul li b {
+    color: var(--blue);
+  }
+
+  /* <---------------------------------------------- Contact Page -----------------------------------------> */
+  .contact {
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid red; */
+  }
+  .contact .row form {
+    margin: 1rem 0;
+    padding-top: 0;
+    /* border: 1px solid red; */
+  }
+
+  .contact {
+    height: 90vh;
+    /* border: 1px solid red; */
+  }
+
+  .contact .row form {
+    /* border: 1px solid red; */
+    width: 100%;
+  }
+
+  .contact .row form .form-box {
+    width: 95%;
+  }
+
+  .info-email {
+    text-transform: none;
+  }
+}
