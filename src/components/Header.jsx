@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <Wrapper>
       <img src={profileImage} alt='profile_image' />
-      <p class='post'>Full Stack Developer</p>
+      <p className='post'>Full Stack Developer</p>
       <Nav />
     </Wrapper>
   );
@@ -29,7 +29,7 @@ const Wrapper = styled.header`
   text-align: center;
   min-height: 100vh;
   padding: 1rem;
-  border: solid 1px blue;
+  ${'' /* border: solid 1px blue; */}
 
   img {
     ${'' /* background-image:url(../public/images/profile-image-modified.jpeg) */}

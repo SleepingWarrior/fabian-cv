@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import AboutInfo from "./AboutInfo";
-// import AboutProjects from "./AboutProjects";
 
 const About = () => {
   return (
@@ -11,7 +10,6 @@ const About = () => {
       </h1>
       <div className='row'>
         <AboutInfo />
-        {/* <AboutProjects /> */}
       </div>
     </Wrapper>
   );
@@ -20,13 +18,11 @@ const About = () => {
 export default About;
 
 const Wrapper = styled.section`
-  border: solid 3px red;
   height: 100vh;
-  margin:0;
-  padding:0;
-  /* margin-left: 2rem; */
+  margin: 0;
+  padding: 0;
 
-    span {
-      color: var(--yellow);
-    }
+  span {
+    color: var(--yellow);
+  }
 `;

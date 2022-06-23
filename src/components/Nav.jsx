@@ -1,48 +1,54 @@
-import React from "react";
+// import React from "react";
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 const Nav = () => {
   return (
-    <Wrapper class='navbar'>
-      <Menu>
-        <Li class='links'>
-          <Link href='#home'>Home</Link>
-        </Li>
-        <Li class='links'>
-          <Link href='#about'>About</Link>
-        </Li>
-        <Li class='links'>
-          <Link href='#education'>Education</Link>
-        </Li>
-        <Li class='links'>
-          <Link href='#competencies'>Competencies</Link>
-        </Li>
-        <Li class='links'>
-          <Link href='#contact'>Contact</Link>
-        </Li>
-      </Menu>
+    <Wrapper className='navbar'>
+      <ul>
+        <li>
+          <NavLink to='/'>Home</NavLink>
+        </li>
+        <li>
+          <NavLink to='about'>About</NavLink>
+        </li>
+        <li>
+          <NavLink to='education'>Education</NavLink>
+        </li>
+        <li>
+          <NavLink to='competencies'>Competencies</NavLink>
+        </li>
+        <li>
+          <NavLink to='contact'>Contact</NavLink>
+        </li>
+      </ul>
     </Wrapper>
   );
 };
 
 export default Nav;
 
-const Wrapper = styled.nav``;
+const Wrapper = styled.nav`
+  heigth: 100%;
+  ul {
+    list-style: none;
+    padding: 1rem 2rem;
 
-const Menu = styled.ul`
-  list-style: none;
-  padding: 1rem 3rem;
-`;
+    li {
+      a {
+        display: block;
+        padding: 1rem;
+        margin: 2rem 0;
+        background: #333;
+        color: #fff;
+        font-size: 2rem;
+        border-radius: 5rem;
+        width: 30rem;
 
-const Li = styled.li``;
-
-const Link = styled.a`
-  display: block;
-  padding: 1rem;
-  margin: 2rem 0;
-  background: #333;
-  color: #fff;
-  font-size: 2rem;
-  border-radius: 5rem;
-  width: 30rem;
+        &:hover {
+          background-color: var(--icon-color);
+        }
+      }
+    }
+  }
 `;

@@ -94,18 +94,15 @@ export default Competencies;
 const Wrapper = styled.section`
   margin-left: 0rem;
   padding: 0;
-  border: 5px solid blue;
   height: 100vh;
 
   .container {
     display: flex;
     flex-direction: column;
-    border: 1px solid red;
 
     .web-skills-container {
       margin-left: 4rem;
       margin-bottom: 2rem;
-      border: solid 1px yellow;
       line-height: 2rem;
 
       h3 {
@@ -113,19 +110,22 @@ const Wrapper = styled.section`
         display: block;
         color: var(--text-color);
         margin: 0rem;
-        ${"" /* margin-left: 4rem; */}
+        padding: 1rem 0;
       }
     }
 
-    ul li {
+    ul {
+      width: 95%;
+      font-size: 1.5rem;
+    }
+
+    li {
       text-transform: none;
-      /* margin: 2rem 0; */
-      margin-top: 1rem;
       color: var(--text-color);
       text-decoration: none;
       font-size: 1.5rem;
-      width: 90%;
-      border: solid 1px red;
+      padding: 0.5rem 0;
+      margin-bottom: 1.5rem;
     }
 
     ul li span {
@@ -138,19 +138,15 @@ const Wrapper = styled.section`
   .other-skills-container {
     display: flex;
     flex-direction: column;
-    border: 1px solid blue;
-    margin-left: 0rem;
     width: 100%;
     padding: 0;
 
     h3 {
       font-size: var(--primary-heading-h2);
-      margin: 0;
       margin-left: 4rem;
     }
 
     ul {
-      /* border: 1px solid blue; */
       margin-left: 4rem;
       width: 100%;
       font-size: 1.5rem;
@@ -158,12 +154,15 @@ const Wrapper = styled.section`
 
     li {
       font-size: 1.5rem;
-      margin-left: 0rem;
-      width: 90%;
+      /* width: 100%; */
 
       b {
         color: var(--icon-color);
-        font-size: 2rem;
+        font-size: var(--secondary-heading-h3);
+      }
+
+      p {
+        width: 95%;
       }
     }
   }
@@ -178,10 +177,7 @@ const Wrapper = styled.section`
   }
 
   .skills-container h3 {
-    margin-left: 2rem;
-  }
-
-  .other-skills-container ul {
+    /* margin-left: 2rem; */
   }
 
   .skills-container ul li b {

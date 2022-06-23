@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -8,16 +9,16 @@ const Home = () => {
       <h1>
         Biography <span> Fabian Petersen</span>
       </h1>
-      <p class='bio'>
+      <p className='bio'>
         I’m a chemical engineer who found his true passion to be web development. Since I started to code I cannot get enough of the endless possibilities that exist as a developer. Learning new things excites me and as an engineer this is right up my alley.
         <br />
         <br />
         At the moment I'm busy completing the Full Stack Web Development Bootcamp at Hyperion Dev and I enjoy every minute of the journey. In addition, I do extra online courses on Udemy to broaden my knowldege as a developer, learning best practices from industry experts and to create effecient yet
         well written code. My goal is to become a full time developer thereby doing what I love.
       </p>
-      <Link href=' about'>
-        <button id='about-btn' class='btn'>
-          about me<i class='fas fa-user'></i>
+      <Link to='about'>
+        <button id='about-btn' className='btn'>
+          About Me<i className='fas fa-user'></i>
         </button>
       </Link>
     </Wrapper>
@@ -30,21 +31,19 @@ const Wrapper = styled.section`
   display: flex;
   flex-flow: column;
   padding: 0 15rem;
-  border: 3px solid red;
   height: 100vh;
   justify-content: center;
 
   h3 {
     font-size: 3rem;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
     color: #fff;
-    border: 1px solid blue;
   }
 
   h1 {
     font-size: 5rem;
     color: #fff;
-    border: 1px solid red;
+    margin-bottom: 1rem;
   }
 
   span {
@@ -55,8 +54,9 @@ const Wrapper = styled.section`
     font-size: 2rem;
     color: #eee;
     padding: 1rem 0;
-    border: 1px solid blue;
     line-height: 2.8rem;
+    text-transform: none;
+    margin-bottom: 2rem;
   }
 
   button {
@@ -69,6 +69,10 @@ const Wrapper = styled.section`
     margin-top: 1rem;
     font-size: 2rem;
     border-radius: 5rem;
+    border: none;
+
+    &:hover {
+      background-color: var(--icon-color);
+    }
   }
 `;
-const Link = styled.a``;

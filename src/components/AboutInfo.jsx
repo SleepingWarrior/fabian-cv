@@ -46,27 +46,32 @@ function AboutInfo() {
 export default AboutInfo;
 
 const Wrapper = styled.div`
-    .info {
-      display: flex;
-      flex-direction:column;
-      height: 90%;
-      width: 100%;
-      font-size: 2rem;
-      line-height: 2rem;
-      padding: 2rem 1rem;
-      padding-left: 1rem;
+  .info {
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    width: 100%;
+    font-size: 2rem;
+    line-height: 2rem;
+    ${'' /* outline: 5px solid red; */}
+    border: none;
 
-      h3 {
-        font-size: var(--secondary-heading-h3);
-        color: var(--yellow);
-        padding: 1rem 0;
-        font-weight: normal;
-      }
-
-      span {
-        color: #eee;
-        padding: 0 0.5rem;
-        color: var(--text-color);
-      }
+    h3 {
+      font-size:var(--secondary-heading-h3);
+      color: var(--yellow);
+      padding: 1rem 0;
+      font-weight: normal;
+      padding-left: 5rem;
+      ${'' /* outline: 2px solid yellow; */}
+      border: none;
     }
+
+    span {
+      color: #eee;
+      padding: 0.5rem;
+      color: var(--text-color);
+      ${'' /* outline: 1px solid red; */}
+      border: none;
+    }
+  }
 `;

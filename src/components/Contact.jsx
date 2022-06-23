@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Contact = () => {
   return (
     <Wrapper className='contact-section'>
-      <h1 className='heading'>
+      <h1 className='heading' id='Contact'>
         <span>contact</span> me
       </h1>
       <div className='row'>
@@ -47,9 +47,9 @@ const Contact = () => {
           <input type='text' placeholder='name' className='form-box' />
           <input type='email' placeholder='email' className='form-box' />
           <input type='text' placeholder='description' className='form-box' />
-          <TextArea name='' id='' cols='30' rows='10' className='form-box message' placeholder='message'></TextArea>
+          <textarea name='' id='' cols='30' rows='10' className='form-box message' placeholder='message'></textarea>
           <button type='submit' id='email-btn' className='btn'>
-            send <i class='bi bi-send-fill'></i>
+            Send <i class='bi bi-send-fill'></i>
           </button>
         </form>
       </div>
@@ -63,15 +63,12 @@ const Wrapper = styled.section`
   height: 100vh;
   margin: 0;
   padding: 0;
-  border: 5px solid red;
-  /* border: 1px solid red; */
 
   h1 {
     text-align: center;
     margin: 0 6rem;
     padding: 1rem;
     border-bottom: 0.1rem solid #fff4;
-    color: var(--text-color);
 
     span {
       color: var(--yellow);
@@ -89,6 +86,7 @@ const Wrapper = styled.section`
         text-transform: none;
         font-size: var(--secondary-heading-h3);
         margin-left: 4rem;
+        margin-bottom: 2rem;
 
         i {
           margin-right: 1.5rem;
@@ -98,17 +96,20 @@ const Wrapper = styled.section`
 
       .socials {
         display: flex;
+        padding: 0.5rem;
         font-size: 3rem;
         margin-left: 4rem;
-        margin-top: 2rem;
         gap: 5rem;
+        margin-bottom: 2rem;
 
         i {
           color: var(--icon-color);
+
           &:hover {
             color: var(--yellow);
             cursor: pointer;
-            font-size: 4.5rem;
+            /* font-size: 3.2rem; */
+            transform: scale(1.8);
           }
         }
       }
@@ -117,23 +118,19 @@ const Wrapper = styled.section`
     form {
       display: flex;
       flex-direction: column;
-      padding: 2rem;
-      margin: 2rem;
-      margin-bottom: 3rem;
-      margin-top: 0rem;
-      margin: 1rem 0;
       padding-top: 0;
-      border: 1px solid yellow;
+      /* border: 1px solid yellow; */
 
       h2 {
         font-size: var(--primary-heading-h2);
-        padding:0;
+        width: 100%;
+        padding: 0;
         margin-left: 4rem;
       }
 
       .form-box {
         padding: 0.5rem;
-        margin: 1rem 0;
+        margin: 1rem 4rem;
         background: #3333;
         color: #fff;
         text-transform: none;
@@ -157,29 +154,15 @@ const Wrapper = styled.section`
 
       button {
         width: 15rem;
-        border: solid red 1px;
+        margin: 1.5rem 4rem;
+        outline: none;
         padding: 0.7rem 2rem;
+        border: none;
+
+        &:hover {
+          background-color: var(--icon-color);
+        }
       }
     }
   }
 `;
-
-const TextArea = styled.textarea``;
-/* span{
-color: var(--yellow);
-//   .contact .row form {
-  //     margin: 1rem 0;
-  //     padding-top: 0;
-  //     /* border: 1px solid red;
-  //   }
-  
-  //   .contact .row form {
-    //     border: 1px solid red;
-    //     width: 100%;
-    //   }
-    
-    //   .info-email {
-      //     text-transform: none;
-      //   }
-      /*  //
-      */

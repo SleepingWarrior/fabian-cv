@@ -99,14 +99,16 @@ const Education = () => {
 export default Education;
 
 const Wrapper = styled.section`
-  border: 5px solid red;
+  ${"" /* border: 5px solid red; */}
   margin: 0;
   padding: 0;
   height: 100vh;
+  ${"" /* outline: solid 3px red; */}
 
   h3 {
     font-size: var(--secondary-heading);
     color: var(--text-color);
+    padding: 1rem 0;
   }
 
   span {
@@ -118,19 +120,18 @@ const Wrapper = styled.section`
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 1rem 0;
+    padding: 1.5rem;
     margin-left: 4rem;
     margin-bottom: 0;
   }
 
   button {
-    margin-left: 4.5rem;
-    padding-bottom: 2rem;
-    border: 1px solid red;
-  }
-  .edu-box {
-    /* border: solid 1px red; */
-    height: 15rem;
+    margin-left: 4rem;
+    border: none;
+
+    &:hover {
+      background-color: var(--icon-color);
+    }
   }
 
   .edu-box {
@@ -141,21 +142,22 @@ const Wrapper = styled.section`
     position: relative;
 
     span {
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       background: #222;
       color: #fff;
       border-radius: 5rem;
-      padding: 0.5rem 2.5rem;
+      padding: 1rem 3rem;
     }
 
     h3 {
-      font-size: var(--secondary-heading);
+      font-size: 1.5rem;
       color: var(--text-color);
-      padding-top: 1.5rem;
+      padding-top: 1.5rem;  
+      ${'' /* outline: solid 3px yellow; */}
     }
 
     p {
-      font-size: 2rem;
+      font-size: 1.8rem;
       color: #eee;
       padding: 1rem 0;
     }
@@ -172,15 +174,14 @@ const Wrapper = styled.section`
       font-size: 3rem;
       color: var(--icon-color);
       background: var(--yellow);
+      ${"" /* border: solid 1px red; */}
     }
-    /* border: solid 1px red; */
   }
 
   .udemy-courses {
     margin-top: 2rem;
     margin-left: 4rem;
-    margin-bottom: 2rem;
-    border: solid 1px yellow;
+    margin-bottom: 3rem;
     line-height: 2rem;
     width: 100%;
 
@@ -188,10 +189,10 @@ const Wrapper = styled.section`
       font-size: 1.5rem;
       width: 90%;
       text-transform: none;
-      margin: 2rem 0;
+      margin: 3rem 0;
       margin-top: 2rem;
       color: var(--text-color);
-      border: solid 1px red;
+      ${"" /* border: solid 1px red; */}
     }
 
     ul li span {
@@ -204,10 +205,6 @@ const Wrapper = styled.section`
       margin-bottom: 0;
       font-size: 3rem;
       /* border: solid 1px blue; */
-    }
-
-    a button {
-      margin-bottom: 2rem;
     }
   }
 `;
