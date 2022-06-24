@@ -7,12 +7,19 @@ import Contact from "./components/Contact";
 import styled from "styled-components";
 import Header from "./components/Header";
 import SharedLayout from "./components/SharedLayout";
+import { useState } from "react";
 
 function App() {
+  const [isActive, setActive] = useState(false);
+
+  const handleSelect = () => {
+    setActive(!false);
+  };
+  
   return (
     <Wrapper className='App'>
       <BrowserRouter>
-        <Header />
+        <Header active={handleSelect} isActive={isActive} />
         <Routes>
           <Route path='/' element={<SharedLayout />} />
           <Route index element={<Home />} />

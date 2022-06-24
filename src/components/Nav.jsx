@@ -7,19 +7,49 @@ const Nav = () => {
     <Wrapper className='navbar'>
       <ul>
         <li>
-          <NavLink to='/'>Home</NavLink>
+          <NavLink
+            to='/'
+            style={({ isActive }) => {
+              return { backgroundColor: isActive ? "var(--yellow)" : "" };
+            }}>
+            Home
+          </NavLink>
         </li>
         <li>
-          <NavLink to='about'>About</NavLink>
+          <NavLink
+            to='about'
+            style={({ isActive }) => {
+              return { backgroundColor: isActive ? "var(--yellow)" : "" };
+            }}>
+            About
+          </NavLink>
         </li>
         <li>
-          <NavLink to='education'>Education</NavLink>
+          <NavLink
+            to='education'
+            style={({ isActive }) => {
+              return { backgroundColor: isActive ? "var(--yellow)" : "" };
+            }}>
+            Education
+          </NavLink>
         </li>
         <li>
-          <NavLink to='competencies'>Competencies</NavLink>
+          <NavLink
+            to='competencies'
+            style={({ isActive }) => {
+              return { backgroundColor: isActive ? "var(--yellow)" : "" };
+            }}>
+            Competencies
+          </NavLink>
         </li>
         <li>
-          <NavLink to='contact'>Contact</NavLink>
+          <NavLink
+            to='contact'
+            style={({ isActive }) => {
+              return { backgroundColor: isActive ? "var(--yellow)" : "" };
+            }}>
+            Contact
+          </NavLink>
         </li>
       </ul>
     </Wrapper>

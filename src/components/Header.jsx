@@ -3,12 +3,12 @@ import styled from "styled-components";
 import Nav from "./Nav";
 import profileImage from "../images/profile-image-modified.jpeg";
 
-const Header = () => {
+const Header = ({ active, isActive }) => {
   return (
     <Wrapper>
       <img src={profileImage} alt='profile_image' />
       <p className='post'>Full Stack Developer</p>
-      <Nav />
+      <Nav active={active} isActice={isActive} />
     </Wrapper>
   );
 };
@@ -29,10 +29,10 @@ const Wrapper = styled.header`
   text-align: center;
   min-height: 100vh;
   padding: 1rem;
-  ${'' /* border: solid 1px blue; */}
+  ${"" /* border: solid 1px blue; */}
 
   img {
-    ${'' /* background-image:url(../public/images/profile-image-modified.jpeg) */}
+    ${"" /* background-image:url(../public/images/profile-image-modified.jpeg) */}
     height: 25rem;
     width: 25rem;
     border-radius: 50%;

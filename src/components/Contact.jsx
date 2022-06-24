@@ -87,7 +87,6 @@ const Wrapper = styled.section`
         font-size: var(--secondary-heading-h3);
         margin-left: 4rem;
         margin-bottom: 2rem;
-
         i {
           margin-right: 1.5rem;
           color: var(--yellow);
@@ -108,7 +107,6 @@ const Wrapper = styled.section`
           &:hover {
             color: var(--yellow);
             cursor: pointer;
-            /* font-size: 3.2rem; */
             transform: scale(1.8);
           }
         }
@@ -119,7 +117,6 @@ const Wrapper = styled.section`
       display: flex;
       flex-direction: column;
       padding-top: 0;
-      /* border: 1px solid yellow; */
 
       h2 {
         font-size: var(--primary-heading-h2);
